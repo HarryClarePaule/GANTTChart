@@ -20,3 +20,4 @@ csv_file_path = 'example_csv.csv'  # Replace this with the path to CSV file
 output_file = f'gantt_chart_{today}.html'  # The name of the output HTML file
 tasks = read_tasks_from_csv(csv_file_path)
 create_gantt_chart(tasks, output_file)
+#

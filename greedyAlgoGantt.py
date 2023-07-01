@@ -33,7 +33,7 @@ for i, task in df.iterrows():
         availability[available_engineer] = max(availability[available_engineer], task['Finish'])
 
 # Save the dataframe back to the CSV file
-df.to_csv(f'{csv_file_path}_sorted.csv', index=False)
+df.to_csv(f'sorted_{csv_file_path}', index=False)
 
 # Plot a Gantt chart
 fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", color="Engineer", hover_data={'Task':True, 'Start':':%Y-%m-%d', 'Finish':':%Y-%m-%d'})
